@@ -5,6 +5,19 @@ const prisma = new PrismaClient();
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
+/**
+ * @swagger
+ * /signup:
+ *   post:
+ *     summary: Signup for Users
+ *     description: Create new users.
+ *     responses:
+ *       '200':
+ *         user: user data
+ *       '400':
+ *         msg: "email and password are required"
+ */
+
 exports.signup = async (req, res) => {
     try {
         let { email, name, password } = req.body;
