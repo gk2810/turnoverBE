@@ -8,10 +8,10 @@ const swaggerUi = require("swagger-ui-express");
 
 const swagger_options = {
     definition: {
-        openapi: "1.0.0",
+        openapi: "3.0.0",
         info: {
             title: "Node JS API for Assessment",
-            version: "1.0.0F"
+            version: "1.0.0"
         },
         server: [
             {
