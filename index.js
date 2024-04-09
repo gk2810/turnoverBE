@@ -3,6 +3,27 @@ const app = express();
 const { Sequelize } = require("sequelize");
 const { Route } = require("./routes/users");
 const cors = require("cors");
+const swaggerJSDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
+const swagger_options = {
+    definition: {
+        openapi: "1.0.0",
+        info: {
+            title: "Node JS API for Assessment",
+            version: "1.0.0F"
+        },
+        server: [
+            {
+                url: "https://turnoverbe.onrender.com"
+            }
+        ]
+    },
+    apis: ["./controller/user.js"]
+}
+
+const swaggerSpecs = swaggerJSDoc(swagger_options);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs))
 
 let corsOptions = {
     origin: "*",

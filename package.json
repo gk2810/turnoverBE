@@ -20,6 +20,8 @@
     "mysql2": "^3.9.3",
     "pg": "^8.11.5",
     "prisma": "^5.12.1",
-    "sequelize": "^6.37.2"
+    "sequelize": "^6.37.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   }
 }
