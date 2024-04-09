@@ -15,7 +15,7 @@ const swagger_options = {
         },
         server: [
             {
-                url: "https://turnoverbe.onrender.com"
+                url: "https://turnoverbe.onrender.com/"
             }
         ]
     },
